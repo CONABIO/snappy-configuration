@@ -84,8 +84,8 @@ conda list
 Now, we can create our virtual environment
 
 ```
-conda create -n snappy_env python=3.4
-conda activate nappy_env
+conda create -n snapp_env python=3.4 -c conda-forge
+conda activate snappy_env
 ```
 
 We download and install the snappy package
@@ -115,8 +115,43 @@ Which components should be installed?
 (To show the description of a component, please enter one of *1, *2, *3, *4, *5)
 Please enter a comma-separated list of the selected values or [Enter] for the default selection:
 ```
-press `2`, then ENTER until finish
+press `2`, then ENTER until installer asks:
+
+```
+Which is your preferred Python version?
+
+If you are a Python developer, you can use the SNAP Java API from Python or
+you can even develop SNAP processor plugins using Python. Here you can
+specify your preferred Python version by the given Python executable to be
+used. Only Python versions 2.7, 3.3 and 3.4 are supported.
+Configure SNAP for use with Python?
+Yes [y], No [n, Enter]
+```
+type `y` and provides full python executable path, in this case 
+```
+/home/ubuntu/anaconda3/envs/snappy_env/bin/python
+```
+
+``` bash
+cd snap/bin/
+./snappy-conf /home/ubuntu/anaconda3/envs/snappy3.4/bin/python
+```
+
+output
+````
+Configuring SNAP-Python interface...
+Done. The SNAP-Python interface is located in '/home/ubuntu/.snap/snap-python/snappy'
+When using SNAP from Python, either do: sys.path.append('/home/ubuntu/.snap/snap-python')
+or copy the 'snappy' module into your Python's 'site-packages' directory.
+```
 
 In general, now we are folliwing this [instructions](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/50855941/Configure+Python+to+use+the+SNAP-Python+snappy+interface).
 
+Now, we can check in a python console
+
+```python
+import sys
+sys.path.append('/home/ubuntu/.snap/snap-python')
+import snappy
+```
 
