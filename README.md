@@ -5,6 +5,12 @@
 First, it is necessary to download the files that we are going to use in the virtual environment and snappy package configuration. 
 We will use [anaconda](https://www.anaconda.com/distribution/) to manage the virtual environment and install the necessary dependencies there and we can get snappy from [ESA](https://step.esa.int/main/download/snap-download/) download page .
 
+
+From a web browser, go to the Anaconda distribution page, available at the following link:
+``` 
+https://www.anaconda.com/distribution/
+```
+
 In a terminal window type as a sudo user, not root:
 ``` bash
 cd /tmp
@@ -79,6 +85,6 @@ Now, we can create our virtual environment
 
 ```
 conda create -n snappy_env python=3.6 anaconda
-source activate snappy_env
+conda activate snappy_env
 ```
  
