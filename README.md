@@ -2,10 +2,9 @@
 This repository contains instructions and commands to configure snappy in a fresh linux environment.
 In general, now we are folliwing this [instructions](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/50855941/Configure+Python+to+use+the+SNAP-Python+snappy+interface).
 
-# Downloads
+# Anaconda download
 First, it is necessary to download the files that we are going to use in the virtual environment and snappy package configuration. 
 We will use [anaconda](https://www.anaconda.com/distribution/) to manage the virtual environment and install the necessary dependencies there and we can get snappy from [ESA](https://step.esa.int/main/download/snap-download/) download page .
-
 
 From a web browser, go to the Anaconda distribution page, available at the following link:
 ``` 
@@ -18,7 +17,7 @@ cd /tmp
 curl -O https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
 ```
 
-# Install
+# Anaconda install
 Check the integrity of the installer with a cryptographic hash check using the SHA-256 checksum:
 
 ```bash
@@ -90,6 +89,7 @@ conda create -n snapp_env python=3.4 -c conda-forge
 conda activate snappy_env
 ```
 
+# Snappy download and install
 We download and install the snappy package
 
 ``` 
