@@ -1,5 +1,6 @@
 # snappy-configuration
- This repository contains instructions and commands to configure snappy in a fresh linux environment.
+This repository contains instructions and commands to configure snappy in a fresh linux environment.
+In general, now we are folliwing this [instructions](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/50855941/Configure+Python+to+use+the+SNAP-Python+snappy+interface).
 
 # Downloads
 First, it is necessary to download the files that we are going to use in the virtual environment and snappy package configuration. 
@@ -17,6 +18,7 @@ cd /tmp
 curl -O https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
 ```
 
+# Install
 Check the integrity of the installer with a cryptographic hash check using the SHA-256 checksum:
 
 ```bash
@@ -134,7 +136,7 @@ type `y` and provides full python executable path, in this case
 
 ``` bash
 cd snap/bin/
-./snappy-conf /home/ubuntu/anaconda3/envs/snappy3.4/bin/python
+./snappy-conf /home/ubuntu/anaconda3/envs/snappy_env/bin/python
 ```
 
 output
@@ -146,7 +148,7 @@ When using SNAP from Python, either do: sys.path.append('/home/ubuntu/.snap/snap
 or copy the 'snappy' module into your Python's 'site-packages' directory.
 ```
 
-In general, now we are folliwing this [instructions](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/50855941/Configure+Python+to+use+the+SNAP-Python+snappy+interface).
+# Test 
 
 Now, we can check in a python console
 
@@ -158,5 +160,5 @@ import snappy
 or copy the 'snappy' module into your Python's 'site-packages' directory, that means
 
 ```
-cp -r /home/ubuntu/.snap/snap-python/snappy /home/ubuntu/anaconda3/envs/snappy3.4/lib/python3.4/site-packages
+cp -r /home/ubuntu/.snap/snap-python/snappy /home/ubuntu/anaconda3/envs/snappy_env/lib/python3.4/site-packages
 ```
