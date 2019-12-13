@@ -5,10 +5,80 @@
 First, it is necessary to download the files that we are going to use in the virtual environment and snappy package configuration. 
 We will use [anaconda](https://www.anaconda.com/distribution/) to manage the virtual environment and install the necessary dependencies there and we can get snappy from [ESA](https://step.esa.int/main/download/snap-download/) download page .
 
-In a terminal window type:
+In a terminal window type as a sudo user, not root:
 ``` bash
-wget https://repo.anaconda.com/archive/Anaconda3-2019.10-MacOSX-x86_64.pkg
-wget http://step.esa.int/downloads/7.0/installers/esa-snap_sentinel_unix_7_0.sh
+cd /tmp
+curl -O wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
 ```
 
-In order to install anaconda you can follow the instructions [here](https://www.digitalocean.com/community/tutorials/como-instalar-anaconda-en-ubuntu-18-04-quickstart-es) for a Ubuntu 18.04.
+Check the integrity of the installer with a cryptographic hash check using the SHA-256 checksum:
+
+```bash
+sha256sum Anaconda3-2019.10-Linux-x86_64.sh
+```
+output:
+``` bash
+09f53738b0cd3bb96f5b1bac488e5528df9906be2480fe61df40e0e0d19e3d48  Anaconda3-5.2.0-Linux-x86_64.sh
+```
+
+```
+bash Anaconda3-2019.10-Linux-x86_64.sh
+```
+
+You will receive the following result to review the license agreement by pressing ENTER until the end.
+```
+Welcome to Anaconda3 5.2.0
+
+In order to continue the installation process, please review the license
+agreement.
+Please, press ENTER to continue
+>>>
+...
+Do you approve the license terms? [yes|no]
+```
+
+
+Once you accept the license, you will be asked to select the installation location. You can press ENTER to accept the default location or specify a different location.
+
+```
+Output
+Anaconda3 will now be installed into this location:
+/home/ubuntu/anaconda3
+
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+
+[/home/ubuntu/anaconda3] >>>
+```
+
+
+When the installation is complete, you will receive the following result:
+```
+...
+installation finished.
+Do you wish the installer to prepend the Anaconda3 install location
+to PATH in your /home/sammy/.bashrc ? [yes|no]
+[no] >>> 
+```
+
+It is recommended that you type `yes` to use the `conda` command.
+
+Now, you can activate the installation with the following command:
+
+```
+source ~/.bashrc
+```
+
+Use the conda command to test the installation and activation:
+```
+conda list
+```
+
+Now, we can create our virtual environment
+
+```
+conda create -n snappy_env python=3.6 anaconda
+source activate snappy_env
+```
+ 
