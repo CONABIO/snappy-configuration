@@ -4,7 +4,7 @@ In general, now we are folliwing this [instructions](https://senbox.atlassian.ne
 
 # Anaconda download
 First, it is necessary to download the files that we are going to use in the virtual environment and snappy package configuration. 
-We will use [anaconda](https://www.anaconda.com/distribution/) to manage the virtual environment and install the necessary dependencies there and we can get snappy from [ESA](https://step.esa.int/main/download/snap-download/) download page .
+We will use [anaconda](https://www.anaconda.com/distribution/) to manage the virtual environment and install the necessary dependencies. 
 
 From a web browser, go to the Anaconda distribution page, available at the following link:
 ``` 
@@ -90,8 +90,7 @@ conda activate snappy_env
 ```
 
 # Snappy download and install
-We download and install the snappy package
-
+We download and install the snappy package. We can get snappy from [ESA](https://step.esa.int/main/download/snap-download/) download page .
 ``` 
 curl -O http://step.esa.int/downloads/7.0/installers/esa-snap_sentinel_unix_7_0.sh
 bash esa-snap_sentinel_unix_7_0.sh
