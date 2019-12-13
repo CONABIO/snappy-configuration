@@ -161,3 +161,14 @@ or copy the 'snappy' module into your Python's 'site-packages' directory, that m
 ```
 cp -r /home/ubuntu/.snap/snap-python/snappy /home/ubuntu/anaconda3/envs/snappy_env/lib/python3.4/site-packages
 ```
+
+# Tunning
+
+We need to specify the ram memory that snappy will use
+```
+cd /home/ubuntu
+vi .snap/snap-python/snappy/snappy.ini
+```
+
+We change `java_max_mem: 1G` with `java_max_mem: 30G`. Preprocessing sentinel-1 images requires a large amount of memory, so it is important to set it to 30 Gb.
+
