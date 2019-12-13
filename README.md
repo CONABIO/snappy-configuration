@@ -155,4 +155,8 @@ import sys
 sys.path.append('/home/ubuntu/.snap/snap-python')
 import snappy
 ```
+or copy the 'snappy' module into your Python's 'site-packages' directory, that means
 
+```
+cp -r /home/ubuntu/.snap/snap-python/snappy /home/ubuntu/anaconda3/envs/snappy3.4/lib/python3.4/site-packages
+```
