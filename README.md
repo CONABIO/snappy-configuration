@@ -14,7 +14,7 @@ https://www.anaconda.com/distribution/
 In a terminal window type as a sudo user, not root:
 ``` bash
 cd /tmp
-curl -O wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+curl -O https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
 ```
 
 Check the integrity of the installer with a cryptographic hash check using the SHA-256 checksum:
@@ -73,7 +73,7 @@ It is recommended that you type `yes` to use the `conda` command.
 Now, you can activate the installation with the following command:
 
 ```
-source ~/.bashrc
+source ~/.bashrcyes
 ```
 
 Use the conda command to test the installation and activation:
@@ -84,7 +84,13 @@ conda list
 Now, we can create our virtual environment
 
 ```
-conda create -n snappy_env python=3.6 anaconda
-conda activate snappy_env
+conda create -n snappy_env python=3.6 
+conda activate nappy_env
 ```
- 
+
+We download and install the snappy package
+
+``` 
+curl -O http://step.esa.int/downloads/7.0/installers/esa-snap_sentinel_unix_7_0.sh
+bash esa-snap_sentinel_unix_7_0.sh
+```
