@@ -138,7 +138,8 @@ cd snap/bin/
 ```
 
 output
-````
+
+```
 Configuring SNAP-Python interface...
 Done. The SNAP-Python interface is located in '/home/ubuntu/.snap/snap-python/snappy'
 When using SNAP from Python, either do: sys.path.append('/home/ubuntu/.snap/snap-python')
