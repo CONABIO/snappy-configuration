@@ -84,7 +84,7 @@ conda list
 Now, we can create our virtual environment
 
 ```
-conda create -n snappy_env python=3.6 
+conda create -n snappy_env python=3.4
 conda activate nappy_env
 ```
 
@@ -94,3 +94,29 @@ We download and install the snappy package
 curl -O http://step.esa.int/downloads/7.0/installers/esa-snap_sentinel_unix_7_0.sh
 bash esa-snap_sentinel_unix_7_0.sh
 ```
+
+output
+```
+Unpacking JRE ...
+Preparing JRE ...
+Starting Installer ...
+This will install ESA SNAP on your computer.
+OK [o, Enter], Cancel [c]
+``` 
+press ENTER, after other configurations, SNAP instalation tool will ask, 
+
+``` 
+Which components should be installed?
+*: SNAP [*1]
+2: Sentinel-1 Toolbox [*2]
+3: Sentinel-2 Toolbox [*3]
+4: Sentinel-3 Toolbox [*4]
+5: Radarsat-2 Toolbox [*5]
+(To show the description of a component, please enter one of *1, *2, *3, *4, *5)
+Please enter a comma-separated list of the selected values or [Enter] for the default selection:
+```
+press `2`, then ENTER until finish
+
+In general, now we are folliwing this [instructions](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/50855941/Configure+Python+to+use+the+SNAP-Python+snappy+interface).
+
+
