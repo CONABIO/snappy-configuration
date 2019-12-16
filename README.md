@@ -74,7 +74,7 @@ It is recommended that you type `yes` to use the `conda` command.
 Now, you can activate the installation with the following command:
 
 ```
-source ~/.bashrcyes
+source ~/.bashrc
 ```
 
 Use the conda command to test the installation and activation:
