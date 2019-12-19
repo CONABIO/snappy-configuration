@@ -1,4 +1,5 @@
 import snappy
+import time
 
 from snappy import ProductIO
 from snappy import HashMap
@@ -13,7 +14,7 @@ HashMap = snappy.jpy.get_type('java.util.HashMap')
 
 # Now loop through all Sentinel-1 data sub folders that are located within a super folder (of course, make sure, that the data is already unzipped):
 
-path = "./downloaded/"
+path = "./downloaded/"   # Path with unzipped scenes
 
 for folder in os.listdir(path):
 
@@ -87,3 +88,4 @@ for folder in os.listdir(path):
       targetDB = GPF.createProduct("LinearToFromdB", parameters, target_2)
 
       ProductIO.writeProduct(targetDB, db, 'GeoTIFF-BigTIFF')
+      time.sleep( 10 )  # Sleep time while java garbage collector ends. (May be not required)
