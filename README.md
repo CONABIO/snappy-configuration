@@ -172,3 +172,30 @@ vi .snap/snap-python/snappy/snappy.ini
 
 We change `java_max_mem: 1G` with `java_max_mem: 30G`. Preprocessing sentinel-1 images requires a large amount of memory, so it is important to set it to 30 Gb.
 
+# Download Sentinel-1 data
+
+Using [`sentinelsat`](https://sentinelsat.readthedocs.io/en/stable/) it's possible to query for products with python:
+
+```python
+from sentinelsat import SentinelAPI, read_geojson, geojson_to_wkt
+from datetime import date
+
+api = SentinelAPI('user', 'password','https://scihub.copernicus.eu/dhus')
+
+# search region
+footprint = geojson_to_wkt(read_geojson('./study_area_latlon.geojson'))
+
+products = api.query(footprint,
+                     date = ('20130101', '20151201'),
+                     platformname = 'Sentinel-1',
+                     orbitdirection = 'ascending',
+                     polarisationmode = 'VV VH',
+                     producttype = 'GRD',
+                     sensoroperationalmode = 'IW')
+
+print(products)
+
+print(len(products))
+
+api.download_all(products)
+```
