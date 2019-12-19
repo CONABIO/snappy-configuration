@@ -1,6 +1,6 @@
 # snappy-configuration
 This repository contains instructions and commands to configure snappy in a fresh linux environment.
-In general, now we are folliwing this [instructions](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/50855941/Configure+Python+to+use+the+SNAP-Python+snappy+interface).
+In general, we are folliwing this [instructions](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/50855941/Configure+Python+to+use+the+SNAP-Python+snappy+interface). It is important to said that snappy works with python 3.4, any other superior python version is not supported. 
 
 # Anaconda download
 First, it is necessary to download the files that we are going to use in the virtual environment and snappy package configuration. 
