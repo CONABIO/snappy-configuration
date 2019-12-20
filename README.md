@@ -199,3 +199,6 @@ print(len(products))
 
 api.download_all(products)
 ```
+
+Check this [methodology](https://thegeoict.com/blog/2019/08/22/processing-sentinel-1-sar-images-using-snappy-snap-python-interface/). May be useful
+
